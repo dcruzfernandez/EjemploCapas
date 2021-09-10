@@ -7,6 +7,7 @@ using System.Linq;
 
 namespace AccesoDatos
 {
+    //capa de acceso a datos
     public class ADClientes
     {
         #region Constructor
