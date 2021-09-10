@@ -1,0 +1,13 @@
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\bin\Debug\netstandard2.0\AccesoDatos.deps.json
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\bin\Debug\netstandard2.0\AccesoDatos.dll
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\bin\Debug\netstandard2.0\AccesoDatos.pdb
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\bin\Debug\netstandard2.0\Entidades.dll
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\bin\Debug\netstandard2.0\Entidades.pdb
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.csproj.AssemblyReference.cache
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.AssemblyInfoInputs.cache
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.AssemblyInfo.cs
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.csproj.CoreCompileInputs.cache
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.csproj.CopyComplete
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.dll
+C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.pdb

@@ -1,0 +1,10 @@
+C:\proyectos\CapasCoreC#\EjemploCapas\Entidades\bin\Debug\netstandard2.0\Entidades.deps.json
+C:\proyectos\CapasCoreC#\EjemploCapas\Entidades\bin\Debug\netstandard2.0\Entidades.dll
+C:\proyectos\CapasCoreC#\EjemploCapas\Entidades\bin\Debug\netstandard2.0\Entidades.pdb
+C:\proyectos\CapasCoreC#\EjemploCapas\Entidades\obj\Debug\netstandard2.0\Entidades.csproj.AssemblyReference.cache
+C:\proyectos\CapasCoreC#\EjemploCapas\Entidades\obj\Debug\netstandard2.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\proyectos\CapasCoreC#\EjemploCapas\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfoInputs.cache
+C:\proyectos\CapasCoreC#\EjemploCapas\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfo.cs
+C:\proyectos\CapasCoreC#\EjemploCapas\Entidades\obj\Debug\netstandard2.0\Entidades.csproj.CoreCompileInputs.cache
+C:\proyectos\CapasCoreC#\EjemploCapas\Entidades\obj\Debug\netstandard2.0\Entidades.dll
+C:\proyectos\CapasCoreC#\EjemploCapas\Entidades\obj\Debug\netstandard2.0\Entidades.pdb
