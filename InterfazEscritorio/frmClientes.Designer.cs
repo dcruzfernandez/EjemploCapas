@@ -47,6 +47,8 @@ namespace InterfazEscritorio
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Existe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cboClientes = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdLista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,19 +121,20 @@ namespace InterfazEscritorio
             // 
             this.btnNuevo.Image = global::InterfazEscritorio.Properties.Resources.add_user_48;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevo.Location = new System.Drawing.Point(221, 406);
+            this.btnNuevo.Location = new System.Drawing.Point(221, 370);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(127, 51);
             this.btnNuevo.TabIndex = 9;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Image = global::InterfazEscritorio.Properties.Resources.save_48;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.Location = new System.Drawing.Point(354, 406);
+            this.btnGuardar.Location = new System.Drawing.Point(354, 370);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(127, 51);
             this.btnGuardar.TabIndex = 10;
@@ -144,7 +147,7 @@ namespace InterfazEscritorio
             // 
             this.btnEliminar.Image = global::InterfazEscritorio.Properties.Resources.remove_user_48;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.Location = new System.Drawing.Point(487, 406);
+            this.btnEliminar.Location = new System.Drawing.Point(487, 370);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(127, 51);
             this.btnEliminar.TabIndex = 11;
@@ -157,7 +160,7 @@ namespace InterfazEscritorio
             // 
             this.btnBuscar.Image = global::InterfazEscritorio.Properties.Resources.Search_48x48;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.Location = new System.Drawing.Point(88, 406);
+            this.btnBuscar.Location = new System.Drawing.Point(88, 370);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(127, 51);
             this.btnBuscar.TabIndex = 13;
@@ -181,12 +184,12 @@ namespace InterfazEscritorio
             this.Direccion,
             this.Existe});
             this.grdLista.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.grdLista.Location = new System.Drawing.Point(29, 204);
+            this.grdLista.Location = new System.Drawing.Point(29, 195);
             this.grdLista.Name = "grdLista";
             this.grdLista.ReadOnly = true;
             this.grdLista.RowTemplate.Height = 25;
             this.grdLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdLista.Size = new System.Drawing.Size(585, 186);
+            this.grdLista.Size = new System.Drawing.Size(585, 159);
             this.grdLista.TabIndex = 14;
             this.grdLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdLista_CellContentClick);
             this.grdLista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdLista_CellDoubleClick);
@@ -229,13 +232,35 @@ namespace InterfazEscritorio
             this.Existe.ReadOnly = true;
             this.Existe.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(574, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 29);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cboClientes
+            // 
+            this.cboClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboClientes.FormattingEnabled = true;
+            this.cboClientes.Location = new System.Drawing.Point(493, 439);
+            this.cboClientes.Name = "cboClientes";
+            this.cboClientes.Size = new System.Drawing.Size(121, 26);
+            this.cboClientes.TabIndex = 16;
+            this.cboClientes.SelectedIndexChanged += new System.EventHandler(this.cboClientes_SelectedIndexChanged);
+            // 
             // frmClientes
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(642, 474);
+            this.ClientSize = new System.Drawing.Size(642, 477);
+            this.Controls.Add(this.cboClientes);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.grdLista);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
@@ -281,6 +306,8 @@ namespace InterfazEscritorio
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Existe;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cboClientes;
     }
 }
 

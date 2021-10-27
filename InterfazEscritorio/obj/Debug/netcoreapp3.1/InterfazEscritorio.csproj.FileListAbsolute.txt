@@ -29,3 +29,4 @@ C:\proyectos\CapasCoreC#\EjemploCapas\InterfazEscritorio\obj\Debug\netcoreapp3.1
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazEscritorio\obj\Debug\netcoreapp3.1\InterfazEscritorio.dll
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazEscritorio\obj\Debug\netcoreapp3.1\InterfazEscritorio.pdb
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazEscritorio\obj\Debug\netcoreapp3.1\InterfazEscritorio.genruntimeconfig.cache
+C:\proyectos\CapasCoreC#\EjemploCapas\InterfazEscritorio\obj\Debug\netcoreapp3.1\InterfazEscritorio.frmPruebas.resources

@@ -25,8 +25,8 @@ namespace InterfazEscritorio.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SD6523F\\SQLEXPRESS;Initial Catalog=Ejemplo;Integrated Securit" +
-            "y=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SD6523F\\SQLEXPRESS;Initial Catalog=Ejemplo;User ID=sa;Passwor" +
+            "d=sa;")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

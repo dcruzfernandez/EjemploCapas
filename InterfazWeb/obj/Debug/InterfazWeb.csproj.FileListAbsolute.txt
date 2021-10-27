@@ -1,5 +1,3 @@
-C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\obj\Debug\InterfazWeb.csproj.AssemblyReference.cache
-C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\obj\Debug\InterfazWeb.csproj.CoreCompileInputs.cache
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\bin\InterfazWeb.dll.config
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\bin\InterfazWeb.dll
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\bin\InterfazWeb.pdb
@@ -62,6 +60,8 @@ C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\bin\LogicaNegocio.pdb
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\bin\System.Data.SqlClient.xml
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\bin\AccesoDatos.pdb
+C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\obj\Debug\InterfazWeb.csproj.AssemblyReference.cache
+C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\obj\Debug\InterfazWeb.csproj.CoreCompileInputs.cache
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\obj\Debug\InterfazWeb.csproj.CopyComplete
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\obj\Debug\InterfazWeb.dll
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\obj\Debug\InterfazWeb.pdb

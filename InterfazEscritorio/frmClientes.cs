@@ -159,6 +159,14 @@ namespace InterfazEscritorio
             {
                 CargarLista();
                 Limpiar();
+                BLCliente logica = new BLCliente(clsConfiguracion.getconnectionString);
+                DataSet DS = logica.ListarCliente("");
+                //define el valor que almacena el combo
+                cboClientes.ValueMember = "Id_cliente";
+                //define el valor que muestra el combo
+                cboClientes.DisplayMember = "Nombre";
+                cboClientes.DataSource = DS.Tables[0];
+                
             }
             catch (Exception ex)
             {
@@ -249,6 +257,27 @@ namespace InterfazEscritorio
         private void grdLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPruebas x = new frmPruebas();
+            x.Show();
+        }
+
+        private void cboClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboClientes.SelectedIndex != -1) {
+                int Id = Convert.ToInt32(cboClientes.SelectedValue.ToString());
+                
+                MessageBox.Show(Id.ToString());
+            }
+            
         }
     }//clase
 }//namespace

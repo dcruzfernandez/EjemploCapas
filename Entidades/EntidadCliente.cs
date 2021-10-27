@@ -28,7 +28,6 @@ namespace Entidades
 
         #region Atributos
 
-
             private int idCliente;
             private string nombre;
             private string direccion;

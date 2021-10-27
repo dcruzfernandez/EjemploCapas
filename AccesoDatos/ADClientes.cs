@@ -63,7 +63,6 @@ namespace AccesoDatos
             }
             finally
             {
-
                 sqlConexion.Dispose();
                 sqlCommand.Dispose();
             }
@@ -73,21 +72,21 @@ namespace AccesoDatos
         public int Modificar(EntidadCliente EntidadCliente)
         {
             int resultado = -1;
-            SqlConnection vlo_Conexion = new SqlConnection(_Cadenaconexion);
-            SqlCommand vlo_Command = new SqlCommand();
+            SqlConnection Conexion = new SqlConnection(_Cadenaconexion);
+            SqlCommand Command = new SqlCommand();
             string Sentencia;
-            vlo_Command.Connection = vlo_Conexion;
-            vlo_Command.Parameters.AddWithValue("@Id_cliente", EntidadCliente.ID_CLIENTE);
-            vlo_Command.Parameters.AddWithValue("@Nombre", EntidadCliente.NOMBRE);
-            vlo_Command.Parameters.AddWithValue("@Direccion", EntidadCliente.DIRECCION);
-            vlo_Command.Parameters.AddWithValue("@Telefono", EntidadCliente.TELEFONO);
+            Command.Connection = Conexion;
+            Command.Parameters.AddWithValue("@Id_cliente", EntidadCliente.ID_CLIENTE);
+            Command.Parameters.AddWithValue("@Nombre", EntidadCliente.NOMBRE);
+            Command.Parameters.AddWithValue("@Direccion", EntidadCliente.DIRECCION);
+            Command.Parameters.AddWithValue("@Telefono", EntidadCliente.TELEFONO);
             Sentencia = "UPDATE CLIENTES SET NOMBRE=@Nombre,DIRECCION=@Direccion, TELEFONO=@Telefono WHERE ID_CLIENTE=@Id_Cliente";
             try
             {
-                vlo_Command.CommandText = Sentencia;
-                vlo_Conexion.Open();
-                resultado = vlo_Command.ExecuteNonQuery();
-                vlo_Conexion.Close();
+                Command.CommandText = Sentencia;
+                Conexion.Open();
+                resultado = Command.ExecuteNonQuery();
+                Conexion.Close();
             }
             catch (Exception)
             {
@@ -96,65 +95,28 @@ namespace AccesoDatos
             }
             finally
             {
-                vlo_Command.Dispose();
-                vlo_Conexion.Dispose();
+                Command.Dispose();
+                Conexion.Dispose();
             }
-
             return resultado;
         }// fin de modificar
 
         public int Eliminar(EntidadCliente EntidadCliente)
         {
-            int vln_resultado = -1;
-            SqlConnection vlo_Conexion = new SqlConnection(_Cadenaconexion);
-            SqlCommand vlo_Command = new SqlCommand();
-            string vlc_Sentencia;
-            vlo_Command.Connection = vlo_Conexion;
-            vlo_Command.Parameters.AddWithValue("@Id_Cliente", EntidadCliente.ID_CLIENTE);
-            vlc_Sentencia = "DELETE FROM CLIENTES WHERE ID_CLIENTE=@Id_Cliente";
-            vlo_Command.CommandText = vlc_Sentencia;
-            try
-            {
-                vlo_Conexion.Open();
-                vlo_Command.ExecuteNonQuery();
-                vln_resultado = 1;
-                vlo_Conexion.Close();
-            }
-            catch (Exception)
-            {
-                vln_resultado = -1;
-                throw;
-            }
-            finally
-            {
-                vlo_Command.Dispose();
-                vlo_Conexion.Dispose();
-            }
-            return vln_resultado;
-        }//fin eliminar
-        public int EliminarConProcedimiento(EntidadCliente EntidadCliente)
-        {
             int resultado = -1;
-
-            SqlConnection vlo_Conexion = new SqlConnection(_Cadenaconexion);
-            SqlCommand vlo_Command = new SqlCommand();
-            string Sentencia = "Eliminar1";
-            vlo_Command.Connection = vlo_Conexion;
-            vlo_Command.CommandType = CommandType.StoredProcedure;
-            vlo_Command.Parameters.AddWithValue("@IdCliente", EntidadCliente.ID_CLIENTE);
-
-            //registrar el parametro de salida
-            vlo_Command.Parameters.Add("@msj", SqlDbType.VarChar, 50).
-                Direction = ParameterDirection.Output;
-            vlo_Command.CommandText = Sentencia;
+            SqlConnection Conexion = new SqlConnection(_Cadenaconexion);
+            SqlCommand Command = new SqlCommand();
+            string Sentencia;
+            Command.Connection = Conexion;
+            Command.Parameters.AddWithValue("@Id_Cliente", EntidadCliente.ID_CLIENTE);
+            Sentencia = "DELETE FROM CLIENTES WHERE ID_CLIENTE=@Id_Cliente";
+            Command.CommandText = Sentencia;
             try
             {
-                vlo_Conexion.Open();
-                vlo_Command.ExecuteNonQuery();
-                //obtener el parametro de salida
-                _mensaje = Convert.ToString(vlo_Command.Parameters["@msj"].Value);
+                Conexion.Open();
+                Command.ExecuteNonQuery();
                 resultado = 1;
-                vlo_Conexion.Close();
+                Conexion.Close();
             }
             catch (Exception)
             {
@@ -163,8 +125,41 @@ namespace AccesoDatos
             }
             finally
             {
-                vlo_Command.Dispose();
-                vlo_Conexion.Dispose();
+                Command.Dispose();
+                Conexion.Dispose();
+            }
+            return resultado;
+        }//fin eliminar
+        public int EliminarConProcedimiento(EntidadCliente EntidadCliente)
+        {
+            int resultado = -1;
+            SqlConnection Conexion = new SqlConnection(_Cadenaconexion);
+            SqlCommand Command = new SqlCommand();
+            string Sentencia = "Eliminar1";
+            Command.Connection = Conexion;
+            Command.CommandType = CommandType.StoredProcedure;
+            Command.Parameters.AddWithValue("@IdCliente", EntidadCliente.ID_CLIENTE);
+            //registrar el parametro de salida
+            Command.Parameters.Add("@msj", SqlDbType.VarChar, 50).Direction = ParameterDirection.Output;
+            Command.CommandText = Sentencia;
+            try
+            {
+                Conexion.Open();
+                Command.ExecuteNonQuery();
+                //obtener el parametro de salida
+                _mensaje = Convert.ToString(Command.Parameters["@msj"].Value);
+                resultado = 1;
+                Conexion.Close();
+            }
+            catch (Exception)
+            {
+                resultado = -1;
+                throw;
+            }
+            finally
+            {
+                Command.Dispose();
+                Conexion.Dispose();
             }
             return resultado;
         }//fin eliminar

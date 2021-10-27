@@ -127,7 +127,7 @@ namespace InterfazWeb
             catch (Exception)
             {
 
-                _Script = String.Format("javascript:pageMostrarMensaje('Error al guardar el cliente');");
+                _Script = string.Format("javascript:pageMostrarMensaje('Error al guardar el cliente');");
                 ScriptManager.RegisterStartupScript(this, typeof(string), "MensajeRetorno", _Script, true);
             }
         }
