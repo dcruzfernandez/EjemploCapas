@@ -192,7 +192,8 @@ namespace AccesoDatos
                     EntidadCliente.ID_CLIENTE = vloDataReader.GetInt32(0);
                     EntidadCliente.NOMBRE = vloDataReader.GetString(1);
                     EntidadCliente.TELEFONO = vloDataReader.GetString(2);
-                    EntidadCliente.DIRECCION = vloDataReader.GetString(3);
+                    if(!vloDataReader.IsDBNull(3))
+                        EntidadCliente.DIRECCION = vloDataReader.GetString(3);
                     EntidadCliente.EXISTE = true;
                 }
                 vlo_Conexion.Close();

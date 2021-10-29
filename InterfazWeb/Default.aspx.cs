@@ -12,12 +12,10 @@ namespace InterfazWeb
 {
     public partial class Default : System.Web.UI.Page
     {
-        //***********************
-        string _Script;
-        //***********************
+       
         private void LimpiarCampos()
         {
-
+            
             txtnombre.Text = string.Empty;
             txtnombre.Focus();
         }
@@ -48,7 +46,7 @@ namespace InterfazWeb
         private void BorrarCliente(int pvn_idCliente)
         {
             BLCliente vlo_LogicaCliente = new BLCliente(clsConfig.getconnectionString);
-            EntidadCliente vlo_EntidadCliente = new EntidadCliente();
+            EntidadCliente vlo_EntidadCliente;
             string vlc_Condicion;
 
 
@@ -61,8 +59,7 @@ namespace InterfazWeb
                 {
                     if (vlo_LogicaCliente.EliminarCliente(vlo_EntidadCliente) > 0)
                     {
-                        _Script = string.Format("javascript:pageMostrarMensaje('Operación realizada satisfactoriamente');");
-                        ScriptManager.RegisterStartupScript(this, typeof(string), "MensajeRetorno", _Script, true);
+                        Session["_mensaje"]="Operación realizada satisfactoriamente";                        
 
                     }
                     LimpiarCampos();
@@ -82,6 +79,7 @@ namespace InterfazWeb
             {
                 if (!Page.IsPostBack)
                 {
+                    //Session["_mensaje"] = null;
                     CargarListaClientes();
                     LimpiarCampos();
                 }
@@ -89,8 +87,8 @@ namespace InterfazWeb
             catch (Exception)
             {
 
-                _Script = string.Format("javascript:pageMostrarMensaje('Error al cargar la lista de clientes');");
-                ScriptManager.RegisterStartupScript(this, typeof(string), "MensajeRetorno", _Script, true);
+               Session["_mensaje"]="Error al cargar la lista de clientes";
+                
             }
         }
 
@@ -128,9 +126,8 @@ namespace InterfazWeb
             }
             catch (Exception)
             {
-
-                _Script = string.Format("javascript:pageMostrarMensaje('Error al eliminar un cliente verifique que no tiene referencias con otras entidades');");
-                ScriptManager.RegisterStartupScript(this, typeof(string), "MensajeRetorno", _Script, true);
+                Session["_mensaje"] = "Error al eliminar un cliente verifique que no tiene referencias con otras entidades";
+               
             }
         }
     }

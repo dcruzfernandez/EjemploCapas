@@ -16,6 +16,17 @@
                     <div class="card-header text-center">
                         <h1>Mantenimiento de Clientes</h1>
                     </div>
+                    <%if (Session["_mensaje"] != null)
+                        { %>
+
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <%=Session["_mensaje"] %>
+                        <button class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <%
+                            //Session["_mensaje"] = null;
+                        }%>
+                    <br />
                     <div class="mb-3">
                         <asp:Label ID="lblID" runat="server" class="form-label" Text="Label">Código</asp:Label>
                         <asp:TextBox ID="txtID" ReadOnly="true" class="form-control" runat="server" AutoCompleteType="Disabled"></asp:TextBox>
@@ -42,9 +53,7 @@
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        function pageMostrarMensaje(Mensaje) {
-            alert(Mensaje);
-        }
+        
     </script>
 </body>
 </html>

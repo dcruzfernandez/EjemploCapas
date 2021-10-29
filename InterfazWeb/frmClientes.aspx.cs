@@ -11,8 +11,7 @@ namespace InterfazWeb
 {
     public partial class frmClientes : System.Web.UI.Page
     {
-        //***************************
-        string _Script;
+     
 
         //*********************************
         private int GuardarCliente()
@@ -33,14 +32,9 @@ namespace InterfazWeb
                 {
                     resultado = LogicaCliente.ModificarCliente(entidadCliente);
                 }
+                Session["_mensaje"] = "Operación realizada satisfactoriamente";
 
-
-                if (resultado > 0)
-                {
-                    _Script = String.Format("javascript:pageMostrarMensaje('Operación realizada satisfactoriamente');");
-                    ScriptManager.RegisterStartupScript(this, typeof(string), "MensajeRetorno", _Script, true);
-                }
-                Response.Redirect("Default.aspx");
+                Response.Redirect("Default.aspx",false);
 
 
             }
@@ -88,6 +82,7 @@ namespace InterfazWeb
             {
                 if (!Page.IsPostBack)
                 {
+                    Session["_mensaje"] = null;
                     if (Session["Id_Cliente"] != null)
                     {
                         condicion = string.Format("Id_Cliente={0}", Session["Id_Cliente"].ToString());
@@ -112,8 +107,7 @@ namespace InterfazWeb
             catch (Exception)
             {
 
-                _Script = String.Format("javascript:pageMostrarMensaje('Error al Cargar el cliente');");
-                ScriptManager.RegisterStartupScript(this, typeof(string), "MensajeRetorno", _Script, true);
+                Session["_mensaje"]="Error al Cargar el cliente";
                 Response.Redirect("Default.aspx");
             }
         }
@@ -124,11 +118,11 @@ namespace InterfazWeb
             {
                 GuardarCliente();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                _Script = string.Format("javascript:pageMostrarMensaje('Error al guardar el cliente');");
-                ScriptManager.RegisterStartupScript(this, typeof(string), "MensajeRetorno", _Script, true);
+                Session["_mensaje"] = ex.Message;/*"Error al guardar el cliente";*/
+                
             }
         }
 
