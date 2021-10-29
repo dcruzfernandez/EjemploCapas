@@ -47,7 +47,6 @@ namespace InterfazEscritorio
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Existe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
             this.cboClientes = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdLista)).BeginInit();
             this.SuspendLayout();
@@ -232,16 +231,6 @@ namespace InterfazEscritorio
             this.Existe.ReadOnly = true;
             this.Existe.Visible = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(574, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 29);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // cboClientes
             // 
             this.cboClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -260,7 +249,6 @@ namespace InterfazEscritorio
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(642, 477);
             this.Controls.Add(this.cboClientes);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.grdLista);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
@@ -306,7 +294,6 @@ namespace InterfazEscritorio
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Existe;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cboClientes;
     }
 }

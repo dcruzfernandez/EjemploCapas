@@ -264,12 +264,7 @@ namespace InterfazEscritorio
             Limpiar();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmPruebas x = new frmPruebas();
-            x.Show();
-        }
-
+        
         private void cboClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboClientes.SelectedIndex != -1) {
