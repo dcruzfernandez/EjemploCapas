@@ -8,6 +8,8 @@ namespace InterfazWeb
 {
     public static class clsConfig
     {
+      
+       
         public static string getconnectionString
         {
             get

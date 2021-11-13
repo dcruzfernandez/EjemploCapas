@@ -66,10 +66,19 @@ namespace LogicaNegocio
         {
             int Resultado = 0;
             ADClientes AccesoDatosCliente = new ADClientes(_cadenaConexion);
+            ADReservacion adReserva = new ADReservacion(_cadenaConexion);
             try
             {
-                Resultado = AccesoDatosCliente.EliminarConProcedimiento(EntidadCliente);
-                _mensaje = AccesoDatosCliente.Mensaje;
+                if (adReserva.ObtenerRegistro($"ID_CLIENTE={EntidadCliente.ID_CLIENTE}").Existe)
+                {
+                    _mensaje = "Imposible eliminar el cliente ya que tiene reservas asignadas";
+                    Resultado = -1;
+                }
+                else {
+                    Resultado = AccesoDatosCliente.EliminarConProcedimiento(EntidadCliente);
+                    _mensaje = AccesoDatosCliente.Mensaje;
+                }
+                
             }
             catch (Exception)
             {

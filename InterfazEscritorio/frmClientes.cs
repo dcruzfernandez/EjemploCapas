@@ -233,6 +233,7 @@ namespace InterfazEscritorio
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            
             buscar = new frmBuscarClientes();
             buscar.Aceptar += new EventHandler(Aceptar);
             buscar.Show();

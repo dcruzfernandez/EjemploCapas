@@ -72,6 +72,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="frmClientes.aspx" />
+    <Content Include="frmReserva.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -90,6 +91,13 @@
     </Compile>
     <Compile Include="frmClientes.aspx.designer.cs">
       <DependentUpon>frmClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmReserva.aspx.cs">
+      <DependentUpon>frmReserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmReserva.aspx.designer.cs">
+      <DependentUpon>frmReserva.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

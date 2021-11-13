@@ -11,7 +11,8 @@ namespace InterfazWeb
 {
     public partial class frmClientes : System.Web.UI.Page
     {
-     
+        //**************************************
+        
 
         //*********************************
         private int GuardarCliente()
@@ -50,6 +51,8 @@ namespace InterfazWeb
             TxtNombre.Text = string.Empty;
             TxtDireccion.Text = string.Empty;
             TxtTelefono.Text = string.Empty;
+            
+
         }
         private EntidadCliente GenerarCliente()
         {
@@ -59,12 +62,15 @@ namespace InterfazWeb
             {
                 entidadCliente.ID_CLIENTE = int.Parse(Session["Id_Cliente"].ToString());
                 entidadCliente.EXISTE = true;
+                
             }
             else
             {
+                
                 entidadCliente.ID_CLIENTE = -1;
                 entidadCliente.EXISTE = false;
             }
+            
             entidadCliente.NOMBRE = TxtNombre.Text.Trim();
             entidadCliente.DIRECCION = TxtDireccion.Text.Trim();
             entidadCliente.TELEFONO = TxtTelefono.Text.Trim();
@@ -116,6 +122,7 @@ namespace InterfazWeb
         {
             try
             {
+
                 GuardarCliente();
             }
             catch (Exception ex)

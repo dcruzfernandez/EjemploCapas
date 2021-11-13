@@ -14,9 +14,11 @@ namespace InterfazEscritorio
         //crear evento
         public event EventHandler Aceptar;
         int idcliente = 0;
+        
         //********************************
         public frmBuscarClientes()
         {
+            
             InitializeComponent();
         }
         //*******************************************

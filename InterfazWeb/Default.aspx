@@ -82,12 +82,7 @@
 
             </div>
             
-            <div class="form-g">
-               
-                
-                
-                
-            </div>
+            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Ir a Reserva</asp:LinkButton>
             
         </div>
     </form>
