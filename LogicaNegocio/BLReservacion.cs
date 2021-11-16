@@ -94,7 +94,7 @@ namespace LogicaNegocio
             }
             return Resultado;
         }
-        public int FacturarReserva(EntidadReservacion Reservacion)
+        public int FacturarReserva(int Reservacion)
         {
             int Resultado;
             ADReservacion AccesoDatosR = new ADReservacion(_cadenaConexion);

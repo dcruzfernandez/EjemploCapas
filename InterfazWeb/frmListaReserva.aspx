@@ -1,14 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="InterfazWeb.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmListaReserva.aspx.cs" Inherits="InterfazWeb.frmListaReserva" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Buscar Clientes</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Listado de Reservas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -16,12 +15,12 @@
             <div class="row ">
                 <div class="col">
                     <div class="card-header text-center">
-                        <h1>Búsqueda de clientes</h1>
+                        <h1>Reservas pendientes</h1>
                     </div>
                      <%--g-3 align-items-center mt-3--%>
                     <div class="row mt-3">
                         <div class="col-auto">
-                            <asp:Label ID="Label1" runat="server" Text="Label" class="col-form-label">Nombre</asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="Label" class="col-form-label">Nombre de cliente</asp:Label>
                         </div>
                         <div class="col-auto">
                             <asp:TextBox ID="txtnombre" runat="server" class="form-control"></asp:TextBox>
@@ -51,18 +50,21 @@
                         <Columns>
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="lnkModificar" runat="server" CommandArgument='<%# Eval("ID_CLIENTE").ToString() %>' CommandName="Modificar" OnCommand="lnkModificar_Command" ToolTip="Modificar"><i class="bi bi-pencil-fill"></i></asp:LinkButton>
+                                    <asp:LinkButton ID="lnkModificar" runat="server" CommandArgument='<%# Eval("NUMRESERVACION").ToString() %>' CommandName="Modificar" ToolTip="Modificar" OnCommand="lnkModificar_Command">Modificar</asp:LinkButton>
                        
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="lnkBorrar" runat="server" CommandArgument='<%# Eval("ID_CLIENTE").ToString() %>' CommandName="Eliminar" OnCommand="lnkBorrar_Command" ToolTip="Eliminar"><i class="bi bi-person-x-fill"></i></asp:LinkButton>
+                                    <asp:LinkButton ID="lnkBorrar" runat="server" CommandArgument='<%# Eval("NUMRESERVACION").ToString() %>' CommandName="Eliminar"  ToolTip="Eliminar" OnCommand="lnkBorrar_Command">Eliminar</asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
+                            <asp:BoundField DataField="NUMRESERVACION" HeaderText="# Reserva" />
                             <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
-                            <asp:BoundField DataField="Telefono" HeaderText="Teléfono" />
-                            <asp:BoundField DataField="Direccion" HeaderText="Dirección" />
+                            <asp:BoundField DataField="FECHAINGRESO" HeaderText="Fecha Ingreso" DataFormatString="{0:d}" />
+                            <asp:BoundField DataField="FechaSalida" HeaderText="Fecha Salida" DataFormatString="{0:d}" />
+                            <asp:BoundField DataField="CANTIDADPERSONAS" HeaderText="Cant. Personas" />
+                            <asp:BoundField DataField="TIPOHABITACION" HeaderText="Tipo de Habitación" />
                         </Columns>
                         <EditRowStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -78,17 +80,15 @@
                         <SortedDescendingCellStyle BackColor="#E9EBEF" />
                         <SortedDescendingHeaderStyle BackColor="#4870BE" />
                     </asp:GridView>
-                    <br />
                 </div>
 
             </div>
-            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Ir a Reserva</asp:LinkButton>
+           
         </div>
+    </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script type="text/javascript">
         
     </script>
-        
-    </form>
 </body>
 </html>

@@ -72,7 +72,7 @@
                                 ValidationGroup="1" 
                                 Operator="GreaterThanEqual" Text="*"></asp:CompareValidator>
                             </asp:Label>
-                        <asp:TextBox ID="txtfechaI" class="form-control" runat="server" AutoCompleteType="Disabled" TextMode="Date"></asp:TextBox>
+                        <asp:TextBox ID="txtfechaI" CssClass="form-control" runat="server" AutoCompleteType="Disabled" TextMode="Date"></asp:TextBox>
                     </div>
                     
                     <div class="mb-3">
@@ -86,9 +86,9 @@
                                 Text="*" ValidationGroup="1"></asp:CompareValidator>
                             <asp:RequiredFieldValidator ID="rfvFechaf" runat="server"
                                 ErrorMessage="La fecha de salida es obligatoria"
-                                ControlToValidate="txtfechaF" Text="*" ValidationGroup="1" Display="Dynamic"></asp:RequiredFieldValidator>
+                                ControlToValidate="txtfechaF"  Text="*" ValidationGroup="1" Display="Dynamic"></asp:RequiredFieldValidator>
                         </asp:Label>
-                        <asp:TextBox ID="txtfechaF" class="form-control" runat="server"  AutoCompleteType="Disabled" TextMode="Date"></asp:TextBox>
+                        <asp:TextBox ID="txtfechaF" CssClass="form-control"  runat="server"  AutoCompleteType="Disabled" TextMode="Date"></asp:TextBox>
                         
                             
                     </div>

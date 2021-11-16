@@ -42,7 +42,7 @@ namespace InterfazWeb
             txtidseleccionado.Text = string.Empty;
             txtcliente.Text = string.Empty;
             txtnombrecliente.Text = string.Empty;
-            txtfechaActual.Text = DateTime.Today.ToString("dd/MM/yyyy");
+            txtfechaActual.Text = DateTime.Today.ToString("d");
             txtfechaF.Text = string.Empty;
             txtfechaI.Text = string.Empty;
             txtpersonas.Text = string.Empty;
@@ -62,15 +62,14 @@ namespace InterfazWeb
                 if (!reserva.Existe)
                 {
                     resultado = LogicaR.InsertarReserva(reserva);
+                    Session["Id_Reserva"] = resultado;
                 }
                 else
                 {
+                    Session["Id_Reserva"] = reserva.NumReservacion;
                     resultado = LogicaR.ModificarReserva(reserva);
                 }
                 Session["_mensaje"] = LogicaR.Mensaje;
-
-                Response.Redirect("Default.aspx", false);
-
 
             }
             catch (Exception)
@@ -120,11 +119,11 @@ namespace InterfazWeb
                         txtnumreserva.Text = reserva.NumReservacion.ToString();
                         txtidseleccionado.Text = reserva.Cliente.ID_CLIENTE.ToString();
                         txtcliente.Text = reserva.Cliente.NOMBRE;
-                        txtfechaI.Text = reserva.FechaIngreso.ToString("dd/MM/yyyy");
-                        txtfechaF.Text = reserva.FechaIngreso.ToString("dd/MM/yyyy");
+                        txtfechaI.Text = reserva.FechaIngreso.ToString("yyyy-MM-dd");
+                        txtfechaF.Text = reserva.FechaSalida.ToString("yyyy-MM-dd");
                         txtpersonas.Text = reserva.CantidadPersonas.ToString();
                         cbotipo.SelectedValue = reserva.TipoHabitacion;
-                        txtfechaActual.Text = DateTime.Today.ToString("dd/MM/yyyy");
+                        txtfechaActual.Text = DateTime.Today.ToString("d");
                     }
                     else
                     {
@@ -174,6 +173,7 @@ namespace InterfazWeb
             {
 
                 Guardar();
+                Response.Redirect("frmFacturar.aspx",false);
             }
             catch (Exception ex)
             {

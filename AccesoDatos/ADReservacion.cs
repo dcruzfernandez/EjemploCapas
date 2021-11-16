@@ -101,14 +101,14 @@ namespace AccesoDatos
             return resultado;
         }// fin de modificar
 
-        public int FacturarReserva(EntidadReservacion EntidadReserva)
+        public int FacturarReserva(int NumReservacion)
         {
             int resultado = -1;
             SqlConnection Conexion = new SqlConnection(_Cadenaconexion);
             SqlCommand Command = new SqlCommand();
             string Sentencia = string.Empty;
             Command.Connection = Conexion;
-            Command.Parameters.AddWithValue("@NUMRESER", EntidadReserva.NumReservacion);
+            Command.Parameters.AddWithValue("@NUMRESER", NumReservacion);
             Sentencia = "UPDATE RESERVACIONES SET CANCELADA=1 WHERE NUMRESERVACION=@NUMRESER";
             try
             {

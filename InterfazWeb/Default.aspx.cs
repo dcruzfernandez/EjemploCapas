@@ -133,8 +133,7 @@ namespace InterfazWeb
 
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            Session["Id_Reserva"] = 1;
-            Response.Redirect("frmReserva.aspx");
+            Response.Redirect("frmListaReserva.aspx");
         }
     }
 }

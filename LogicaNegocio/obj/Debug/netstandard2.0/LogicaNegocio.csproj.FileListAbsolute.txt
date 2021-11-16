@@ -10,5 +10,6 @@ C:\proyectos\CapasCoreC#\EjemploCapas\LogicaNegocio\obj\Debug\netstandard2.0\Log
 C:\proyectos\CapasCoreC#\EjemploCapas\LogicaNegocio\obj\Debug\netstandard2.0\LogicaNegocio.AssemblyInfoInputs.cache
 C:\proyectos\CapasCoreC#\EjemploCapas\LogicaNegocio\obj\Debug\netstandard2.0\LogicaNegocio.AssemblyInfo.cs
 C:\proyectos\CapasCoreC#\EjemploCapas\LogicaNegocio\obj\Debug\netstandard2.0\LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\proyectos\CapasCoreC#\EjemploCapas\LogicaNegocio\obj\Debug\netstandard2.0\LogicaNegocio.csproj.CopyComplete
 C:\proyectos\CapasCoreC#\EjemploCapas\LogicaNegocio\obj\Debug\netstandard2.0\LogicaNegocio.dll
 C:\proyectos\CapasCoreC#\EjemploCapas\LogicaNegocio\obj\Debug\netstandard2.0\LogicaNegocio.pdb

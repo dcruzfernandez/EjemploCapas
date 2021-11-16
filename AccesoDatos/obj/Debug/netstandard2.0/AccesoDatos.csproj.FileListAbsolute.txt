@@ -8,6 +8,5 @@ C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\Acces
 C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.AssemblyInfoInputs.cache
 C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.AssemblyInfo.cs
 C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.csproj.CoreCompileInputs.cache
-C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.csproj.CopyComplete
 C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.dll
 C:\proyectos\CapasCoreC#\EjemploCapas\AccesoDatos\obj\Debug\netstandard2.0\AccesoDatos.pdb

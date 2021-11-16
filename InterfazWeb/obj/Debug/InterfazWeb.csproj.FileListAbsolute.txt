@@ -64,3 +64,4 @@ C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\obj\Debug\InterfazWeb.csproj.A
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\obj\Debug\InterfazWeb.csproj.CoreCompileInputs.cache
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\obj\Debug\InterfazWeb.dll
 C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\obj\Debug\InterfazWeb.pdb
+C:\proyectos\CapasCoreC#\EjemploCapas\InterfazWeb\obj\Debug\InterfazWeb.csproj.CopyComplete
