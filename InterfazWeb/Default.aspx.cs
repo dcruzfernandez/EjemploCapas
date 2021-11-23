@@ -59,8 +59,11 @@ namespace InterfazWeb
                 {
                     if (vlo_LogicaCliente.EliminarCliente(vlo_EntidadCliente) > 0)
                     {
-                        Session["_mensaje"]="Operación realizada satisfactoriamente";                        
+                        Session["_mensaje"] = "Operación realizada satisfactoriamente";
 
+                    }
+                    else {
+                        Session["_mensaje"] = vlo_LogicaCliente.Mensaje;
                     }
                     LimpiarCampos();
                     CargarListaClientes();
